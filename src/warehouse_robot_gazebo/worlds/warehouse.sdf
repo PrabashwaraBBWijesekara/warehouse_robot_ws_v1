@@ -1,0 +1,1679 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <world name="warehouse">
+
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin filename="gz-sim-contact-system" name="gz::sim::systems::Contact"/>
+
+    <gravity>0 0 -9.81</gravity>
+
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.9 0.9 0.9 1</diffuse>
+      <specular>0.3 0.3 0.3 1</specular>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <include>
+      <uri>model://warehouse</uri>
+      <name>warehouse</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+
+  
+    <!-- GENERATED: shelves and boxes -->
+    <include>
+      <uri>model://shelf</uri>
+      <name>shelf_1</name>
+      <pose>0.0 1.2 0.0 0 0 0.0</pose>
+    </include>
+    <model name="box_000">
+      <pose>-1.4000 1.1500 0.5220 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_0.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_001">
+      <pose>-0.9000 1.1500 0.5220 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_1.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_002">
+      <pose>-0.4000 1.1500 0.5220 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_2.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_003">
+      <pose>0.1000 1.1500 0.5220 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_3.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_004">
+      <pose>0.8500 1.1500 0.5220 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_4.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_005">
+      <pose>1.3500 1.1500 0.5220 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_5.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_006">
+      <pose>-1.4000 1.1500 0.9720 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_6.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_007">
+      <pose>-0.9000 1.1500 0.9720 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_7.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_008">
+      <pose>-0.4000 1.1500 0.9720 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_8.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_009">
+      <pose>0.1000 1.1500 0.9720 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_9.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_010">
+      <pose>0.8500 1.1500 0.9720 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_10.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_011">
+      <pose>1.3500 1.1500 0.9720 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_11.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_012">
+      <pose>-1.4000 1.1500 1.4220 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_12.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_013">
+      <pose>-0.9000 1.1500 1.4220 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_13.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_014">
+      <pose>-0.4000 1.1500 1.4220 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_14.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_015">
+      <pose>0.1000 1.1500 1.4220 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_15.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_016">
+      <pose>0.8500 1.1500 1.4220 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_16.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_017">
+      <pose>1.3500 1.1500 1.4220 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_17.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_018">
+      <pose>-1.4000 1.1500 1.8720 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_18.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_019">
+      <pose>-0.9000 1.1500 1.8720 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_19.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_020">
+      <pose>-0.4000 1.1500 1.8720 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_20.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_021">
+      <pose>0.1000 1.1500 1.8720 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_21.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_022">
+      <pose>0.8500 1.1500 1.8720 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_22.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_023">
+      <pose>1.3500 1.1500 1.8720 0 0 -1.57080</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_23.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <include>
+      <uri>model://shelf</uri>
+      <name>shelf_2</name>
+      <pose>0.0 -1.2 0.0 0 0 3.14159</pose>
+    </include>
+    <model name="box_024">
+      <pose>1.4000 -1.1500 0.5220 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_24.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_025">
+      <pose>0.9000 -1.1500 0.5220 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_25.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_026">
+      <pose>0.4000 -1.1500 0.5220 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_26.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_027">
+      <pose>-0.1000 -1.1500 0.5220 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_27.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_028">
+      <pose>-0.8500 -1.1500 0.5220 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_28.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_029">
+      <pose>-1.3500 -1.1500 0.5220 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_29.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_030">
+      <pose>1.4000 -1.1500 0.9720 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_30.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_031">
+      <pose>0.9000 -1.1500 0.9720 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_31.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_032">
+      <pose>0.4000 -1.1500 0.9720 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_32.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_033">
+      <pose>-0.1000 -1.1500 0.9720 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_33.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_034">
+      <pose>-0.8500 -1.1500 0.9720 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_34.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_035">
+      <pose>-1.3500 -1.1500 0.9720 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_35.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_036">
+      <pose>1.4000 -1.1500 1.4220 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_36.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_037">
+      <pose>0.9000 -1.1500 1.4220 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_37.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_038">
+      <pose>0.4000 -1.1500 1.4220 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_38.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_039">
+      <pose>-0.1000 -1.1500 1.4220 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_39.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_040">
+      <pose>-0.8500 -1.1500 1.4220 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_40.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_041">
+      <pose>-1.3500 -1.1500 1.4220 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_41.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_042">
+      <pose>1.4000 -1.1500 1.8720 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_42.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_043">
+      <pose>0.9000 -1.1500 1.8720 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_43.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_044">
+      <pose>0.4000 -1.1500 1.8720 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_44.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_045">
+      <pose>-0.1000 -1.1500 1.8720 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_45.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_046">
+      <pose>-0.8500 -1.1500 1.8720 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_46.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="box_047">
+      <pose>-1.3500 -1.1500 1.8720 0 0 1.57079</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.008854</ixx><iyy>0.010417</iyy><izz>0.011771</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <surface>
+            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="body">
+          <geometry><box><size>0.4 0.35 0.3</size></box></geometry>
+          <material>
+            <ambient>0.72 0.55 0.35 1</ambient>
+            <diffuse>0.72 0.55 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="marker">
+          <pose>0.2005 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.16 0.16</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr><metal><albedo_map>model://aruco_markers/textures/aruco_47.png</albedo_map></metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>

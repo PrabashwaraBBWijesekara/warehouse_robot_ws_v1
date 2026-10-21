@@ -1,0 +1,16 @@
+box_size: [0.40, 0.35, 0.30]   # depth (toward aisle), width, height
+box_mass: 0.5
+marker_size: 0.16
+marker_id_start: 0
+box_front_offset: -0.05        # box centre along shelf-local Y; front face ends up at y=-0.25
+
+# Measured from the shelf model.sdf (same for every shelf)
+level_tops_z: [0.37, 0.82, 1.27, 1.72]
+slots_x: [-1.40, -0.90, -0.40, 0.10,    # bay A (4 boxes)
+           0.85,  1.35]                 # bay B (2 boxes)
+
+# pose: [x, y, z, yaw]. z = floor height (set after the floor check below).
+# The shelf's open side faces its local -Y: yaw 0 faces world -Y, yaw 3.14159 faces +Y.
+shelves:
+  - {name: shelf_1, pose: [0.0,  1.2, 0.0, 0.0]}
+  - {name: shelf_2, pose: [0.0, -1.2, 0.0, 3.14159]}
