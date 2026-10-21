@@ -30,7 +30,7 @@ def generate_launch_description():
 
     sim_with_gui = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(gz_launch),
-        launch_arguments={'gz_args': ['-r ', world_path]}.items(),
+        launch_arguments={'gz_args': ['', world_path]}.items(),
         condition=UnlessCondition(LaunchConfiguration('headless')),
     )
 
